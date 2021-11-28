@@ -1,0 +1,16 @@
+<h1>GeekKobeman</h1>
+<h3>ささやき一覧</h3>
+<%= link_to "新規ささやきへ", students_new_path %>
+<div class="students-container">
+  <% @student.each do |t| %>
+    <div class="student">
+      <%= t.name %>
+      <%= t.profile %>
+      <%= t.mentor %>
+      <%= t.grade %>
+      <%= t.created_at %>
+
+       <%= link_to "詳細へ", student_path(t.id) %>
+    </div>
+  <% end %>
+</div>
